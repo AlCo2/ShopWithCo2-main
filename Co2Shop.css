@@ -56,7 +56,7 @@ nav{
     transform: scale(102%);
     transition: 200ms ease-in-out;
 }
-button{
+.button{
     position: relative;
     background: #ed920b;
     color: black;
@@ -66,13 +66,14 @@ button{
     padding: 3px;
     letter-spacing: 0.1em;
     transition: 0.5s;
-    border-radius: 5px;
+    border-radius: 5px 5px 5px;
     outline: none;
+    border: black;
 }
-button:hover{
+.button:hover{
     transform: translateX(3px);
 }
-button::before{
+.button::before{
     content: '';
     position: absolute;
     inset: 2px;
@@ -145,4 +146,37 @@ svg:hover{
 .TOP{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ;
     letter-spacing: 2%;
+}
+#topdeals{
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff ;
+    outline: 2px solid #fff;
+    padding: 30px 60px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+    cursor: pointer;
+    background-color: rgba(255, 0, 183, 0.294);
+}
+
+#topdeals:hover{
+    color: rgb(255, 255, 255);
+}
+#topdeals::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #0764de;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+#topdeals:hover::before{
+    width: 150%;
 }
